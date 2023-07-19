@@ -14,6 +14,7 @@
 		1FFE4C162A147F9C00129966 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FFE4C152A147F9C00129966 /* Assets.xcassets */; };
 		1FFE4C192A147F9C00129966 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FFE4C172A147F9C00129966 /* LaunchScreen.storyboard */; };
 		1FFE4C212A14931E00129966 /* NewAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFE4C202A14931E00129966 /* NewAlarmViewController.swift */; };
+		A491ABF58B50E4011AA24269 /* Pods_SmartFitnessTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5638E0CD9E3024897471F396 /* Pods_SmartFitnessTimer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,9 @@
 		1FFE4C182A147F9C00129966 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1FFE4C1A2A147F9C00129966 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FFE4C202A14931E00129966 /* NewAlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAlarmViewController.swift; sourceTree = "<group>"; };
+		342B0289DC420477DCE13E47 /* Pods-SmartFitnessTimer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartFitnessTimer.release.xcconfig"; path = "Target Support Files/Pods-SmartFitnessTimer/Pods-SmartFitnessTimer.release.xcconfig"; sourceTree = "<group>"; };
+		5638E0CD9E3024897471F396 /* Pods_SmartFitnessTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartFitnessTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DE6DECE5537869965F92E6F /* Pods-SmartFitnessTimer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartFitnessTimer.debug.xcconfig"; path = "Target Support Files/Pods-SmartFitnessTimer/Pods-SmartFitnessTimer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A491ABF58B50E4011AA24269 /* Pods_SmartFitnessTimer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,8 @@
 			children = (
 				1FFE4C0B2A147F9B00129966 /* SmartFitnessTimer */,
 				1FFE4C0A2A147F9B00129966 /* Products */,
+				E849301BD722BD3657EC29E7 /* Pods */,
+				D79472EAAB2553642BE8A924 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +77,24 @@
 			path = SmartFitnessTimer;
 			sourceTree = "<group>";
 		};
+		D79472EAAB2553642BE8A924 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5638E0CD9E3024897471F396 /* Pods_SmartFitnessTimer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E849301BD722BD3657EC29E7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6DE6DECE5537869965F92E6F /* Pods-SmartFitnessTimer.debug.xcconfig */,
+				342B0289DC420477DCE13E47 /* Pods-SmartFitnessTimer.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,9 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1FFE4C1D2A147F9C00129966 /* Build configuration list for PBXNativeTarget "SmartFitnessTimer" */;
 			buildPhases = (
+				2D89D83B2680ACF287B9C3AB /* [CP] Check Pods Manifest.lock */,
 				1FFE4C052A147F9B00129966 /* Sources */,
 				1FFE4C062A147F9B00129966 /* Frameworks */,
 				1FFE4C072A147F9B00129966 /* Resources */,
+				845E526FC67DDB80AEEE3283 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -135,6 +162,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2D89D83B2680ACF287B9C3AB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SmartFitnessTimer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		845E526FC67DDB80AEEE3283 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SmartFitnessTimer/Pods-SmartFitnessTimer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SmartFitnessTimer/Pods-SmartFitnessTimer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SmartFitnessTimer/Pods-SmartFitnessTimer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1FFE4C052A147F9B00129966 /* Sources */ = {
@@ -286,6 +355,7 @@
 		};
 		1FFE4C1E2A147F9C00129966 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DE6DECE5537869965F92E6F /* Pods-SmartFitnessTimer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -313,6 +383,7 @@
 		};
 		1FFE4C1F2A147F9C00129966 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 342B0289DC420477DCE13E47 /* Pods-SmartFitnessTimer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
