@@ -9,11 +9,28 @@ import UIKit
 
 class MainAlarmsViewController: UITableViewController {
     
-    let itemArray = ["1", "2", "3"]
+    var itemArray = [Alarm]()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        tableView.register(UINib(nibName: "AlarmCell", bundle: nil), forCellReuseIdentifier: "ToDoItem")
+        
+        let newAlarm = Alarm()
+        newAlarm.title = "Chest"
+        newAlarm.minute = "1"
+        newAlarm.second = "15"
+        
+        let newAlarm2 = Alarm()
+        newAlarm2.title = "Leg"
+        newAlarm2.minute = "3"
+        newAlarm2.second = "0"
+        
+        itemArray.append(newAlarm)
+        itemArray.append(newAlarm2)
+        
         self.navigationItem.hidesBackButton = true
     }
 
@@ -26,8 +43,9 @@ class MainAlarmsViewController: UITableViewController {
         return itemArray.count
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoItem", for: indexPath)
-        cell.textLabel?.text = itemArray[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoItem", for: indexPath) as! AlarmCell
+        cell.minuteLabel?.text = itemArray[indexPath.row].title
+        cell.secondLabel?.text = itemArray[indexPath.row].minute + "m " + itemArray[indexPath.row].second + "s"
         return cell
     }
 

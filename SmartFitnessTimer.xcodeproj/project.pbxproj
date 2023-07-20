@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1FD352352A67780C007FFE6C /* AlarmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD352332A67780C007FFE6C /* AlarmCell.swift */; };
+		1FD352362A67780C007FFE6C /* AlarmCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FD352342A67780C007FFE6C /* AlarmCell.xib */; };
+		1FEB936A2A68D8C600897ECA /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEB93692A68D8C600897ECA /* Alarm.swift */; };
 		1FFE4C0D2A147F9B00129966 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFE4C0C2A147F9B00129966 /* AppDelegate.swift */; };
 		1FFE4C0F2A147F9B00129966 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFE4C0E2A147F9B00129966 /* SceneDelegate.swift */; };
 		1FFE4C112A147F9B00129966 /* MainAlarmsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFE4C102A147F9B00129966 /* MainAlarmsViewController.swift */; };
@@ -18,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1FD352332A67780C007FFE6C /* AlarmCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmCell.swift; sourceTree = "<group>"; };
+		1FD352342A67780C007FFE6C /* AlarmCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlarmCell.xib; sourceTree = "<group>"; };
+		1FEB93692A68D8C600897ECA /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
 		1FFE4C092A147F9B00129966 /* SmartFitnessTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartFitnessTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FFE4C0C2A147F9B00129966 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FFE4C0E2A147F9B00129966 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +79,9 @@
 				1FFE4C152A147F9C00129966 /* Assets.xcassets */,
 				1FFE4C172A147F9C00129966 /* LaunchScreen.storyboard */,
 				1FFE4C1A2A147F9C00129966 /* Info.plist */,
+				1FD352332A67780C007FFE6C /* AlarmCell.swift */,
+				1FD352342A67780C007FFE6C /* AlarmCell.xib */,
+				1FEB93692A68D8C600897ECA /* Alarm.swift */,
 			);
 			path = SmartFitnessTimer;
 			sourceTree = "<group>";
@@ -91,7 +100,6 @@
 				6DE6DECE5537869965F92E6F /* Pods-SmartFitnessTimer.debug.xcconfig */,
 				342B0289DC420477DCE13E47 /* Pods-SmartFitnessTimer.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -158,6 +166,7 @@
 				1FFE4C192A147F9C00129966 /* LaunchScreen.storyboard in Resources */,
 				1FFE4C162A147F9C00129966 /* Assets.xcassets in Resources */,
 				1FFE4C142A147F9B00129966 /* Main.storyboard in Resources */,
+				1FD352362A67780C007FFE6C /* AlarmCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,10 +219,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FD352352A67780C007FFE6C /* AlarmCell.swift in Sources */,
 				1FFE4C112A147F9B00129966 /* MainAlarmsViewController.swift in Sources */,
 				1FFE4C212A14931E00129966 /* NewAlarmViewController.swift in Sources */,
 				1FFE4C0D2A147F9B00129966 /* AppDelegate.swift in Sources */,
 				1FFE4C0F2A147F9B00129966 /* SceneDelegate.swift in Sources */,
+				1FEB936A2A68D8C600897ECA /* Alarm.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
