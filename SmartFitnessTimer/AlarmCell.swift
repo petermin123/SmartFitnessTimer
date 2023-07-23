@@ -10,10 +10,7 @@ import UIKit
 class AlarmCell: UITableViewCell {
     @IBOutlet weak var minuteLabel: UILabel!
     @IBOutlet weak var secondLabel: UILabel!
-    
-    @IBAction func turnOnAlarm(_ sender: Any) {
-    }
-    
+        
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

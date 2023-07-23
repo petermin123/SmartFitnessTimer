@@ -20,13 +20,13 @@ class MainAlarmsViewController: UITableViewController {
         
         let newAlarm = Alarm()
         newAlarm.title = "Chest"
-        newAlarm.minute = "1"
-        newAlarm.second = "15"
+        newAlarm.minute = 1
+        newAlarm.second = 15
         
         let newAlarm2 = Alarm()
         newAlarm2.title = "Leg"
-        newAlarm2.minute = "3"
-        newAlarm2.second = "0"
+        newAlarm2.minute = 3
+        newAlarm2.second = 0
         
         itemArray.append(newAlarm)
         itemArray.append(newAlarm2)
@@ -45,8 +45,22 @@ class MainAlarmsViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoItem", for: indexPath) as! AlarmCell
         cell.minuteLabel?.text = itemArray[indexPath.row].title
-        cell.secondLabel?.text = itemArray[indexPath.row].minute + "m " + itemArray[indexPath.row].second + "s"
+        cell.secondLabel?.text = "\(itemArray[indexPath.row].minute)m \(itemArray[indexPath.row].second)s"
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showCountdown", sender: self)
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! CountdownViewController
+        if let indexPath = tableView.indexPathForSelectedRow {
+            let countdownLength = itemArray[indexPath.row].minute * 60 + itemArray[indexPath.row].second
+            destinationVC.secondsRemaining = countdownLength
+            destinationVC.totalSeconds = countdownLength
+        }
     }
 
 }

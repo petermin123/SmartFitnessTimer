@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1FC174432A6CBC9000433101 /* CountdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC174422A6CBC9000433101 /* CountdownViewController.swift */; };
 		1FD352352A67780C007FFE6C /* AlarmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD352332A67780C007FFE6C /* AlarmCell.swift */; };
 		1FD352362A67780C007FFE6C /* AlarmCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FD352342A67780C007FFE6C /* AlarmCell.xib */; };
 		1FEB936A2A68D8C600897ECA /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEB93692A68D8C600897ECA /* Alarm.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1FC174422A6CBC9000433101 /* CountdownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownViewController.swift; sourceTree = "<group>"; };
 		1FD352332A67780C007FFE6C /* AlarmCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmCell.swift; sourceTree = "<group>"; };
 		1FD352342A67780C007FFE6C /* AlarmCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlarmCell.xib; sourceTree = "<group>"; };
 		1FEB93692A68D8C600897ECA /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				1FD352332A67780C007FFE6C /* AlarmCell.swift */,
 				1FD352342A67780C007FFE6C /* AlarmCell.xib */,
 				1FEB93692A68D8C600897ECA /* Alarm.swift */,
+				1FC174422A6CBC9000433101 /* CountdownViewController.swift */,
 			);
 			path = SmartFitnessTimer;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FC174432A6CBC9000433101 /* CountdownViewController.swift in Sources */,
 				1FD352352A67780C007FFE6C /* AlarmCell.swift in Sources */,
 				1FFE4C112A147F9B00129966 /* MainAlarmsViewController.swift in Sources */,
 				1FFE4C212A14931E00129966 /* NewAlarmViewController.swift in Sources */,

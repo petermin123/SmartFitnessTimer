@@ -10,6 +10,6 @@ import RealmSwift
 
 class Alarm: Object {
     @objc dynamic var title: String = ""
-    @objc dynamic var minute: String = ""
-    @objc dynamic var second: String = ""
+    @objc dynamic var minute: Int = 0
+    @objc dynamic var second: Int = 0
 }

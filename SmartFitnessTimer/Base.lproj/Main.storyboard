@@ -14,7 +14,7 @@
             <objects>
                 <tableViewController id="E7Y-g2-mgK" customClass="MainAlarmsViewController" customModule="SmartFitnessTimer" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="hsf-DA-I0I">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
@@ -41,6 +41,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="13M-hk-EIL" kind="presentation" identifier="showCountdown" id="Hsy-On-N8z"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N0e-cF-Nqh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -51,7 +54,7 @@
             <objects>
                 <viewController id="IjO-Lh-q6O" customClass="NewAlarmViewController" customModule="SmartFitnessTimer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SIM-hi-yPf">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wrA-7X-4Gz">
@@ -105,9 +108,73 @@
             </objects>
             <point key="canvasLocation" x="1936.6412213740457" y="3.5211267605633805"/>
         </scene>
+        <!--Countdown View Controller-->
+        <scene sceneID="x1E-X7-LH9">
+            <objects>
+                <viewController id="13M-hk-EIL" customClass="CountdownViewController" customModule="SmartFitnessTimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h22-we-iMO">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bdY-L6-FBh">
+                                <rect key="frame" x="130" y="300" width="133" height="242"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lkf-Xg-0z8">
+                                        <rect key="frame" x="0.0" y="0.0" width="133" height="54.666666666666664"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="quY-vs-s2h">
+                                        <rect key="frame" x="0.0" y="62.666666666666686" width="133" height="54.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Start"/>
+                                        <connections>
+                                            <action selector="startPressed:" destination="13M-hk-EIL" eventType="touchUpInside" id="hoJ-Km-qpO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZc-Ag-YLn">
+                                        <rect key="frame" x="0.0" y="125.00000000000001" width="133" height="54.666666666666671"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Stop"/>
+                                        <connections>
+                                            <action selector="stopPressed:" destination="13M-hk-EIL" eventType="touchUpInside" id="Rmm-eu-HQw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hRm-hi-npf">
+                                        <rect key="frame" x="0.0" y="187.66666666666669" width="133" height="54.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Reset"/>
+                                        <connections>
+                                            <action selector="resetPressed:" destination="13M-hk-EIL" eventType="touchUpInside" id="oYZ-2c-nOR"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="quY-vs-s2h" firstAttribute="top" secondItem="lkf-Xg-0z8" secondAttribute="bottom" constant="20" id="ig0-Ng-aMM"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bb0-zK-4kX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bdY-L6-FBh" firstAttribute="top" secondItem="bb0-zK-4kX" secondAttribute="top" constant="300" id="HoT-Gk-bHN"/>
+                            <constraint firstItem="bdY-L6-FBh" firstAttribute="leading" secondItem="bb0-zK-4kX" secondAttribute="leading" constant="130" id="PnF-mE-9qp"/>
+                            <constraint firstItem="bb0-zK-4kX" firstAttribute="trailing" secondItem="bdY-L6-FBh" secondAttribute="trailing" constant="130" id="f1X-oV-rPz"/>
+                            <constraint firstItem="bb0-zK-4kX" firstAttribute="bottom" secondItem="bdY-L6-FBh" secondAttribute="bottom" constant="300" id="smU-2E-97J"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="remainingTimeLabel" destination="lkf-Xg-0z8" id="TqL-hg-wVP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jg8-7E-vG5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3776" y="-673"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Zcy-da-Wq8"/>
+        <segue reference="YoD-6M-M9v"/>
     </inferredMetricsTieBreakers>
     <resources>
         <namedColor name="AccentColor">
