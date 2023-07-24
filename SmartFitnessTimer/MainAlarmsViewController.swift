@@ -55,13 +55,29 @@ class MainAlarmsViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destinationVC = segue.destination as! CountdownViewController
-        if let indexPath = tableView.indexPathForSelectedRow {
-            let countdownLength = itemArray[indexPath.row].minute * 60 + itemArray[indexPath.row].second
-            destinationVC.secondsRemaining = countdownLength
-            destinationVC.totalSeconds = countdownLength
+        if let destinationVC = segue.destination as? CountdownViewController {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let countdownLength = itemArray[indexPath.row].minute * 60 + itemArray[indexPath.row].second
+                destinationVC.secondsRemaining = countdownLength
+                destinationVC.totalSeconds = countdownLength
+            }
+        } else if let _ = segue.destination as? NewAlarmViewController {
+        }
+        
+    }
+    
+    @IBAction func myUnwindAction(unwindSegue: UIStoryboardSegue) {
+        if let sourceVC = unwindSegue.source as? NewAlarmViewController {
+            let selectedCountdown = Alarm()
+            selectedCountdown.title = sourceVC.selectedAlarmName
+            selectedCountdown.minute = sourceVC.selectedMinute
+            selectedCountdown.second = sourceVC.selectedSecond
+            itemArray.append(selectedCountdown)
+            tableView.reloadData()
         }
     }
+    
+    
 
 }
 

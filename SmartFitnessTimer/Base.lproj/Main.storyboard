@@ -76,7 +76,7 @@
                             <color key="tintColor" name="AccentColor"/>
                             <connections>
                                 <action selector="goBackToTable:" destination="IjO-Lh-q6O" id="m6d-VV-MnW"/>
-                                <segue destination="E7Y-g2-mgK" kind="show" id="Zcy-da-Wq8"/>
+                                <segue destination="l5L-pA-cM4" kind="unwind" unwindAction="myUnwindActionWithUnwindSegue:" id="pY1-ms-W6m"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -86,6 +86,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hLt-MY-Sph" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="l5L-pA-cM4" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3776.3358778625952" y="3.5211267605633805"/>
         </scene>
@@ -173,9 +174,6 @@
             <point key="canvasLocation" x="3776" y="-673"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="YoD-6M-M9v"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

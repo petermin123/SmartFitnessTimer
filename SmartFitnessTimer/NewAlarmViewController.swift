@@ -7,13 +7,14 @@
 
 import UIKit
 
-class NewAlarmViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class NewAlarmViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         alarmPicker.delegate = self
         alarmPicker.dataSource = self
+        alarmName.delegate = self
     }
     
     let pickerData: [[Int]] = [
@@ -29,9 +30,9 @@ class NewAlarmViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     @IBOutlet weak var alarmName: UITextField!
     var selectedMinute: Int = 0
     var selectedSecond: Int = 0
-    var selectedAlarmName: String = ""
+    var selectedAlarmName: String = "TEST"
     
-    //MARK: PickerView DataSource and Delegate Methods
+    //MARK: - PickerView DataSource and Delegate Methods
     // Desired number of columns of pickers
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 2
@@ -46,12 +47,23 @@ class NewAlarmViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         selectedMinute = pickerView.selectedRow(inComponent: 0)
         selectedSecond = pickerView.selectedRow(inComponent: 1)
-        selectedAlarmName = alarmName.text!
     }
     
     // Displays the data passed in as the title for the picker view
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return String(pickerData[component][row])
+    }
+    
+    //MARK: - UITextField Delegate
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField.text != "" {
+            selectedAlarmName = textField.text!
+        }
     }
 
 }
