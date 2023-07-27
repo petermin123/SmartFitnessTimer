@@ -33,7 +33,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="All Alarms" id="xeZ-YT-xDd">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="jvZ-A3-pL8">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="jvZ-A3-pL8">
                             <color key="tintColor" systemColor="linkColor"/>
                             <connections>
                                 <action selector="addNewAlarmButton:" destination="E7Y-g2-mgK" id="gdr-1e-Li8"/>
@@ -72,7 +72,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="New Alarm" style="browser" id="PIW-0C-AFf">
-                        <barButtonItem key="rightBarButtonItem" title="Save Alarm" style="plain" changesSelectionAsPrimaryAction="YES" id="meW-6f-wxK">
+                        <barButtonItem key="rightBarButtonItem" title="Save Alarm" changesSelectionAsPrimaryAction="YES" id="meW-6f-wxK">
                             <color key="tintColor" name="AccentColor"/>
                             <connections>
                                 <action selector="goBackToTable:" destination="IjO-Lh-q6O" id="m6d-VV-MnW"/>
@@ -88,7 +88,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hLt-MY-Sph" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="l5L-pA-cM4" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3776.3358778625952" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="3969" y="-302"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="B3A-Zv-O7P">
@@ -171,7 +171,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jg8-7E-vG5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3776" y="-673"/>
+            <point key="canvasLocation" x="3969" y="352"/>
         </scene>
     </scenes>
     <resources>

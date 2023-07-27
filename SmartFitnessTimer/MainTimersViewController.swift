@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import RealmSwift
 
 class MainTimersViewController: UITableViewController {
     
     var itemArray = [CountdownTimer]()
     
+    let realm = try! Realm()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +34,9 @@ class MainTimersViewController: UITableViewController {
         itemArray.append(newAlarm2)
         
         self.navigationItem.hidesBackButton = true
+        
+        fetchTimers()
+        
     }
 
     @IBAction func addNewAlarmButton(_ sender: UIBarButtonItem) {
@@ -73,11 +78,27 @@ class MainTimersViewController: UITableViewController {
             selectedCountdown.minute = sourceVC.selectedMinute
             selectedCountdown.second = sourceVC.selectedSecond
             itemArray.append(selectedCountdown)
-            tableView.reloadData()
+            do {
+                try realm.write {
+                    realm.add(selectedCountdown)
+                }
+            } catch {
+                print("Error saving countdown object: \(error)")
+            }
+            self.tableView.reloadData()
         }
     }
     
-    
+    func fetchTimers() {
+        let allTimersInRealm = realm.objects(CountdownTimer.self)
+        
+        if (!allTimersInRealm.isEmpty) {
+            for timer in allTimersInRealm {
+                self.itemArray.append(timer)
+            }
+            self.tableView.reloadData()
+        }
+    }
 
 }
 
