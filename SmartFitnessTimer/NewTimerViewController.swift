@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NewAlarmViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
+class NewTimerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AlarmCell: UITableViewCell {
+class TimerCell: UITableViewCell {
     @IBOutlet weak var minuteLabel: UILabel!
     @IBOutlet weak var secondLabel: UILabel!
         

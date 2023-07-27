@@ -7,23 +7,23 @@
 
 import UIKit
 
-class MainAlarmsViewController: UITableViewController {
+class MainTimersViewController: UITableViewController {
     
-    var itemArray = [Alarm]()
+    var itemArray = [CountdownTimer]()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        tableView.register(UINib(nibName: "AlarmCell", bundle: nil), forCellReuseIdentifier: "ToDoItem")
+        tableView.register(UINib(nibName: "TimerCell", bundle: nil), forCellReuseIdentifier: "Countdown")
         
-        let newAlarm = Alarm()
+        let newAlarm = CountdownTimer()
         newAlarm.title = "Chest"
         newAlarm.minute = 1
         newAlarm.second = 15
         
-        let newAlarm2 = Alarm()
+        let newAlarm2 = CountdownTimer()
         newAlarm2.title = "Leg"
         newAlarm2.minute = 3
         newAlarm2.second = 0
@@ -43,7 +43,7 @@ class MainAlarmsViewController: UITableViewController {
         return itemArray.count
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoItem", for: indexPath) as! AlarmCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Countdown", for: indexPath) as! TimerCell
         cell.minuteLabel?.text = itemArray[indexPath.row].title
         cell.secondLabel?.text = "\(itemArray[indexPath.row].minute)m \(itemArray[indexPath.row].second)s"
         return cell
@@ -61,14 +61,14 @@ class MainAlarmsViewController: UITableViewController {
                 destinationVC.secondsRemaining = countdownLength
                 destinationVC.totalSeconds = countdownLength
             }
-        } else if let _ = segue.destination as? NewAlarmViewController {
+        } else if let _ = segue.destination as? NewTimerViewController {
         }
         
     }
     
     @IBAction func myUnwindAction(unwindSegue: UIStoryboardSegue) {
-        if let sourceVC = unwindSegue.source as? NewAlarmViewController {
-            let selectedCountdown = Alarm()
+        if let sourceVC = unwindSegue.source as? NewTimerViewController {
+            let selectedCountdown = CountdownTimer()
             selectedCountdown.title = sourceVC.selectedAlarmName
             selectedCountdown.minute = sourceVC.selectedMinute
             selectedCountdown.second = sourceVC.selectedSecond

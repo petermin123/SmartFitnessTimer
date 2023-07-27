@@ -12,7 +12,7 @@
         <!--All Alarms-->
         <scene sceneID="mS9-ep-b7U">
             <objects>
-                <tableViewController id="E7Y-g2-mgK" customClass="MainAlarmsViewController" customModule="SmartFitnessTimer" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="E7Y-g2-mgK" customClass="MainTimersViewController" customModule="SmartFitnessTimer" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="hsf-DA-I0I">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -52,7 +52,7 @@
         <!--New Alarm-->
         <scene sceneID="ua7-xJ-eEE">
             <objects>
-                <viewController id="IjO-Lh-q6O" customClass="NewAlarmViewController" customModule="SmartFitnessTimer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="IjO-Lh-q6O" customClass="NewTimerViewController" customModule="SmartFitnessTimer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SIM-hi-yPf">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

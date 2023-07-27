@@ -8,33 +8,33 @@
 
 /* Begin PBXBuildFile section */
 		1FC174432A6CBC9000433101 /* CountdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC174422A6CBC9000433101 /* CountdownViewController.swift */; };
-		1FD352352A67780C007FFE6C /* AlarmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD352332A67780C007FFE6C /* AlarmCell.swift */; };
-		1FD352362A67780C007FFE6C /* AlarmCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FD352342A67780C007FFE6C /* AlarmCell.xib */; };
-		1FEB936A2A68D8C600897ECA /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEB93692A68D8C600897ECA /* Alarm.swift */; };
+		1FD352352A67780C007FFE6C /* TimerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD352332A67780C007FFE6C /* TimerCell.swift */; };
+		1FD352362A67780C007FFE6C /* TimerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FD352342A67780C007FFE6C /* TimerCell.xib */; };
+		1FEB936A2A68D8C600897ECA /* CountdownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEB93692A68D8C600897ECA /* CountdownTimer.swift */; };
 		1FFE4C0D2A147F9B00129966 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFE4C0C2A147F9B00129966 /* AppDelegate.swift */; };
 		1FFE4C0F2A147F9B00129966 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFE4C0E2A147F9B00129966 /* SceneDelegate.swift */; };
-		1FFE4C112A147F9B00129966 /* MainAlarmsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFE4C102A147F9B00129966 /* MainAlarmsViewController.swift */; };
+		1FFE4C112A147F9B00129966 /* MainTimersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFE4C102A147F9B00129966 /* MainTimersViewController.swift */; };
 		1FFE4C142A147F9B00129966 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FFE4C122A147F9B00129966 /* Main.storyboard */; };
 		1FFE4C162A147F9C00129966 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FFE4C152A147F9C00129966 /* Assets.xcassets */; };
 		1FFE4C192A147F9C00129966 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FFE4C172A147F9C00129966 /* LaunchScreen.storyboard */; };
-		1FFE4C212A14931E00129966 /* NewAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFE4C202A14931E00129966 /* NewAlarmViewController.swift */; };
+		1FFE4C212A14931E00129966 /* NewTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFE4C202A14931E00129966 /* NewTimerViewController.swift */; };
 		A491ABF58B50E4011AA24269 /* Pods_SmartFitnessTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5638E0CD9E3024897471F396 /* Pods_SmartFitnessTimer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1FC174422A6CBC9000433101 /* CountdownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownViewController.swift; sourceTree = "<group>"; };
-		1FD352332A67780C007FFE6C /* AlarmCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmCell.swift; sourceTree = "<group>"; };
-		1FD352342A67780C007FFE6C /* AlarmCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlarmCell.xib; sourceTree = "<group>"; };
-		1FEB93692A68D8C600897ECA /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
+		1FD352332A67780C007FFE6C /* TimerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerCell.swift; sourceTree = "<group>"; };
+		1FD352342A67780C007FFE6C /* TimerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimerCell.xib; sourceTree = "<group>"; };
+		1FEB93692A68D8C600897ECA /* CountdownTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownTimer.swift; sourceTree = "<group>"; };
 		1FFE4C092A147F9B00129966 /* SmartFitnessTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartFitnessTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FFE4C0C2A147F9B00129966 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FFE4C0E2A147F9B00129966 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1FFE4C102A147F9B00129966 /* MainAlarmsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAlarmsViewController.swift; sourceTree = "<group>"; };
+		1FFE4C102A147F9B00129966 /* MainTimersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTimersViewController.swift; sourceTree = "<group>"; };
 		1FFE4C132A147F9B00129966 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1FFE4C152A147F9C00129966 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1FFE4C182A147F9C00129966 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1FFE4C1A2A147F9C00129966 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1FFE4C202A14931E00129966 /* NewAlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAlarmViewController.swift; sourceTree = "<group>"; };
+		1FFE4C202A14931E00129966 /* NewTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTimerViewController.swift; sourceTree = "<group>"; };
 		342B0289DC420477DCE13E47 /* Pods-SmartFitnessTimer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartFitnessTimer.release.xcconfig"; path = "Target Support Files/Pods-SmartFitnessTimer/Pods-SmartFitnessTimer.release.xcconfig"; sourceTree = "<group>"; };
 		5638E0CD9E3024897471F396 /* Pods_SmartFitnessTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartFitnessTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DE6DECE5537869965F92E6F /* Pods-SmartFitnessTimer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartFitnessTimer.debug.xcconfig"; path = "Target Support Files/Pods-SmartFitnessTimer/Pods-SmartFitnessTimer.debug.xcconfig"; sourceTree = "<group>"; };
@@ -75,15 +75,15 @@
 			children = (
 				1FFE4C0C2A147F9B00129966 /* AppDelegate.swift */,
 				1FFE4C0E2A147F9B00129966 /* SceneDelegate.swift */,
-				1FFE4C102A147F9B00129966 /* MainAlarmsViewController.swift */,
-				1FFE4C202A14931E00129966 /* NewAlarmViewController.swift */,
+				1FFE4C102A147F9B00129966 /* MainTimersViewController.swift */,
+				1FFE4C202A14931E00129966 /* NewTimerViewController.swift */,
 				1FFE4C122A147F9B00129966 /* Main.storyboard */,
 				1FFE4C152A147F9C00129966 /* Assets.xcassets */,
 				1FFE4C172A147F9C00129966 /* LaunchScreen.storyboard */,
 				1FFE4C1A2A147F9C00129966 /* Info.plist */,
-				1FD352332A67780C007FFE6C /* AlarmCell.swift */,
-				1FD352342A67780C007FFE6C /* AlarmCell.xib */,
-				1FEB93692A68D8C600897ECA /* Alarm.swift */,
+				1FD352332A67780C007FFE6C /* TimerCell.swift */,
+				1FD352342A67780C007FFE6C /* TimerCell.xib */,
+				1FEB93692A68D8C600897ECA /* CountdownTimer.swift */,
 				1FC174422A6CBC9000433101 /* CountdownViewController.swift */,
 			);
 			path = SmartFitnessTimer;
@@ -169,7 +169,7 @@
 				1FFE4C192A147F9C00129966 /* LaunchScreen.storyboard in Resources */,
 				1FFE4C162A147F9C00129966 /* Assets.xcassets in Resources */,
 				1FFE4C142A147F9B00129966 /* Main.storyboard in Resources */,
-				1FD352362A67780C007FFE6C /* AlarmCell.xib in Resources */,
+				1FD352362A67780C007FFE6C /* TimerCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,12 +223,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FC174432A6CBC9000433101 /* CountdownViewController.swift in Sources */,
-				1FD352352A67780C007FFE6C /* AlarmCell.swift in Sources */,
-				1FFE4C112A147F9B00129966 /* MainAlarmsViewController.swift in Sources */,
-				1FFE4C212A14931E00129966 /* NewAlarmViewController.swift in Sources */,
+				1FD352352A67780C007FFE6C /* TimerCell.swift in Sources */,
+				1FFE4C112A147F9B00129966 /* MainTimersViewController.swift in Sources */,
+				1FFE4C212A14931E00129966 /* NewTimerViewController.swift in Sources */,
 				1FFE4C0D2A147F9B00129966 /* AppDelegate.swift in Sources */,
 				1FFE4C0F2A147F9B00129966 /* SceneDelegate.swift in Sources */,
-				1FEB936A2A68D8C600897ECA /* Alarm.swift in Sources */,
+				1FEB936A2A68D8C600897ECA /* CountdownTimer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
